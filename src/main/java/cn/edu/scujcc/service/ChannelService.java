@@ -29,7 +29,7 @@ public class ChannelService {
 	 * 获取一个频道的数据
 	 * 
 	 * @param channelId 频道编号
-	 * @return 频道对象，未找到返回 null
+	 * @return 频道对象，未找到返回 null 
 	 */
 	public Channel getChannel(String channelId) {
 		Optional<Channel> result = repo.findById(channelId);

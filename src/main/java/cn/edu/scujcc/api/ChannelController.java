@@ -28,20 +28,21 @@ public class ChannelController {
 	
 	@GetMapping
 	public List<Channel> getAllChannels() {
-		Logger.info("   ڷ       Ƶ    Ϣ...");
+		Logger.info("正在读取所有频道信息");
 		List<Channel> results = service.getAllChannels();
-		Logger.debug("    Ƶ         ǣ "+results.size());
+		
 		
 		return results;
 	}
 
 	@GetMapping("/{id}")
 	public Channel getChannel(@PathVariable String id) {
+		Logger.info("正在读取"+id+"的频道信息...");
 		Channel c = service.getChannel(id);
 		if (c != null) {
 			return c;
 		}else {
-			Logger.error(" Ҳ   ָ    Ƶ    ");
+			Logger.error(" 找不到指定的频道");
 			return null;
 		}
 	}
