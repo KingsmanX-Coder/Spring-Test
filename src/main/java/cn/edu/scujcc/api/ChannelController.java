@@ -49,7 +49,7 @@ public class ChannelController {
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> deleteChannel(@PathVariable String id) {
-		System.out.println("即将删除的频�?,id="+id);
+		System.out.println("马上删除视频,id="+id);
 		boolean result = service.deleteChannel(id);
 		if(result) {
 		   return ResponseEntity.ok().body("删除成功");
