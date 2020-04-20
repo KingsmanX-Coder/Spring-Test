@@ -60,7 +60,7 @@ public class ChannelController {
 	 
 	@PostMapping
 	public Channel createChannel(@RequestBody Channel c) {
-		System.out.println("即将创建频道，频道数据："+c);
+		System.out.println("创建频道，频道数据："+c);
 		Channel saved = service.creatChannel(c);
 		return saved;
 	}
